@@ -608,6 +608,11 @@ func (c *Client) Ban(channel, username, reason string) {
 	c.Say(channel, "/ban "+username+" "+reason)
 }
 
+// Delete delete message by id
+func (c *Client) Delete(channel, msgId string) {
+	c.Say(channel, "/delete " + msgId)
+}
+
 // Creates an irc join message to join the given channels.
 //
 // Returns the join message, any channels included in the join message,
